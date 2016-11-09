@@ -1,0 +1,19 @@
+#	Author: John Gibbons
+#	Date: 2016.10.26
+
+
+
+prog: main.o test.o
+	g++ -g -Wall -std=c++11 main.o LinkedListOfInts.o test.o -o prog
+
+main.o: main.cpp test.h
+	g++ -g -Wall -std=c++11 -c main.cpp
+
+test.o: test.h test.cpp
+	g++ -std=c++11 -g -Wall -c test.cpp
+
+
+
+#DON'T delete LinkedList.o!
+clean:
+	rm main.o *.*~ prog

@@ -1,0 +1,30 @@
+/**
+*	@author 
+*	@date 
+*	@file main.cpp
+*	@brief driver for LinkedList demo
+*/
+#include <iostream>
+#include "LinkedListOfInts.h"
+#include "test.h"
+#include <fstream>
+
+int main(int argc, char** argv)
+{
+	//Example of declaring a LinkedListOfInts
+	LinkedListOfInts testList;
+	Test myTester(testList);
+	myTester.runTests();
+
+	std::cout << "Running...\nAnd we're done.\nGoodbye.\n";
+	
+	ofstream file;
+	file.open("buglist.txt");
+	file << "Best guesses of possible bugs:\n"
+		<< "1. isEmpty() is malfuntioning"
+		<< "2. removeBack() is malfunctioning\n";
+	file.close();
+	return (0);
+
+}
+

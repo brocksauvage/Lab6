@@ -1,0 +1,4 @@
+Best guesses of possible bugs:
+1. isEmpty() is malfuntioning when list is non-empty
+2. The removal functions are malfuntioning when nodes should be removed
+3. The size of the list is not being maintained correctly
